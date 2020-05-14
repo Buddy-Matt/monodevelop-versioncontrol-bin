@@ -2,7 +2,7 @@
 pkgname=monodevelop-versioncontrol-bin
 pkgver=7.8.4
 pkgrel=1
-pkgdesc="MonoDevelop is a GNOME IDE primarily designed for C# and other CLI (.NET) languages"
+pkgdesc="VersionControl addins compatible with the monodevelop-bin package"
 arch=('x86_64')
 license=('MIT')
 depends=('monodevelop-bin')

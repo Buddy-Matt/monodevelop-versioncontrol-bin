@@ -1,0 +1,3 @@
+[submodule "aur-repo"]
+	path = aur-repo
+	url = ssh://aur@aur.archlinux.org/monodevelop-versioncontrol-bin.git
