@@ -26,6 +26,6 @@ Build Core/MonoDevelop.Core
 Build Addins/VersionControl
 Build Addins/ChangeLogAddIn
 
-rm main/build/AddIns/VersionControl/*.pdb
-rm main/build/AddIns/ChangeLogAddIn/*.pdb
+rm main/build/AddIns/VersionControl/&ast;.pdb
+rm main/build/AddIns/ChangeLogAddIn/&ast;.pdb
 
