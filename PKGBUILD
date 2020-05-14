@@ -9,13 +9,14 @@ depends=('monodevelop-bin')
 provides=('monodevelop-versioncontrol')
 url="https://github.com/mono/monodevelop"
 
-source=("monodevelop-amd64-v${_pkgver}.deb::http://download.mono-project.com/repo/ubuntu/pool/main/m/monodevelop/monodevelop_7.8.4.1-0xamarin6+ubuntu1804b1_amd64.deb")
-sha256sums=('e98cf23872aa0cb09fa000dd8f0ef9ad7f03a41a2d28ab1e2f215493bbd073bc')
+source=("monodevelop-versioncontrol-bin.tar.gz::https://github.com/Buddy-Matt/monodevelop-versioncontrol-bin/releases/download/0.1/monodevelop-versioncontrol-bin.tar.gz")
+sha256sums=('3bd030cafedb7a601bffcfc179df68c41580a095c2b87a65a7b586cc6c7acf00')
 
 package() {
     cd "${srcdir}"
 
-    bsdtar xf data.tar.xz
+    mkdir -p usr/lib/monodevelop/AddIns/
+    bsdtar -xf monodevelop-versioncontrol-bin.tar.gz -C usr/lib/monodevelop/AddIns/
     chmod -R g-w usr
     mv usr "${pkgdir}"
 }
